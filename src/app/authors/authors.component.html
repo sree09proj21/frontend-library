@@ -1,0 +1,41 @@
+
+<br>
+<div class="card"> 
+
+    <div class="card-body">
+<div class="table-responsive">
+    <table class="table">
+
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>Name</th>
+                <th>About</th>                 
+                <th></th>               
+            </tr>
+        </thead>
+
+        <tbody>
+<tr *ngFor='let author of authors'>
+    <td>
+        <img 
+        [src]="author.image"
+        [style.width.px]='imageWidth'
+        [style.margin.px]='imageMargin'>
+    </td>
+    <td>{{author.name}}</td>
+    <td>{{author.about}}</td>
+       <td><button type="button" class="btn btn-primary" (click)="singleAuthor(author)">ReadMore</button></td>
+        <td>
+        <button class="btn btn-warning" (click)="editAuthor(author)"*ngIf=auth.loggedIn()> Edit</button>
+        <button class="btn btn-danger" (click)="deleteAuthor(author)"*ngIf=auth.loggedIn() >Delete</button>
+      </td>
+</tr>
+        </tbody>
+        
+    </table>
+</div>
+    </div>
+
+</div>
+

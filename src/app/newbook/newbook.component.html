@@ -1,0 +1,64 @@
+<br>
+<div class="container">
+    <div class="row">
+      
+      <div class="col-md-12"> 
+        
+        <div class="panel">
+          <div class="panel-body">          
+                    <div class="row"> 
+              <div class="col-md-2"></div>   
+              
+              <div class="col-md-7">
+              <form #adbook="ngForm" (ngSubmit)="AddBook()" >
+                  <div class="form-group row">
+                  <label  class="col-sm-4 col-form-label">Book Title</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" name="title" [(ngModel)]="bookItem.title" required/>
+                  </div>
+                </div>
+                <br>
+                <div class="form-group row">
+                  <label  class="col-sm-4 col-form-label">Author</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" name="author" [(ngModel)]="bookItem.author"required/>
+                  </div>
+                </div>
+                <br>
+                <div class="form-group row">
+                  <label class="col-sm-4 col-form-label">Genre</label>
+                  <div class="col-sm-8">
+                      <input type="text" class="form-control" name="genre"  [(ngModel)]="bookItem.genre" required/>
+                </div>
+                </div>
+                <br>
+                <div class="form-group row">
+                  <label class="col-sm-4 col-form-label">Image</label>
+                  <div class="col-sm-8">
+                      <input type="text"  class="form-control" name="image" [(ngModel)]="bookItem.image" required/>
+                </div>
+                </div>
+                <br>
+                <button type="submit" class="btn btn-primary" [disabled]="adbook.form.invalid">Add</button>
+              </form>
+            </div>
+  
+              <div class="col-md-3"></div>
+              </div>       
+           </div>
+        </div>                                                                                       
+                                     
+         </div>
+    </div>
+  </div>
+                                                  
+                                                                                  
+ 
+  
+  
+  
+  
+ 
+  
+
+
